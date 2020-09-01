@@ -13,14 +13,14 @@ export default class Mycomponent extends React.Component {
 
     componentDidMount()
     {
-        fetch('https://rickandmortyapi.com/api/character/2')
+        fetch('https://rickandmortyapi.com/api/character/')
         .then(res => res.json())
         .then(res => {
             this.setState({
-                items : res,
+                items : res.results,
                 isLoaded : true
             })
-            console.log(res);
+            console.log(res.results);
         }).catch (err => {
             console.log(err)
         })
@@ -34,7 +34,7 @@ export default class Mycomponent extends React.Component {
          else
          {return (
             <div>
-             <Childcomponent name={items.name} status ={items.status} species={items.species}></Childcomponent>
+             { items.map (item => <Childcomponent key={item.name} name={item.name} status ={item.status} species={item.species}></Childcomponent>)}
             </div>
          );}
     }
@@ -43,10 +43,7 @@ export default class Mycomponent extends React.Component {
 
 class Childcomponent extends React.Component {
 
-
-
     render () {
-
         return (
 
             <div>
