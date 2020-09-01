@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import Grid from '@material-ui/core/Grid';
+import Badge from '@material-ui/core/Badge';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
@@ -26,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
       textAlign : 'left'
     },
     avatar: {
-      backgroundColor: red[500],
+      backgroundColor: "#fc7703",
     },
   }));
 
@@ -45,7 +46,6 @@ export default function Childcomponent (props)  {
           </Avatar>
         }
         title={props.name}
-        subheader={props.status}
         className={classes.title}
       />
       <CardMedia
