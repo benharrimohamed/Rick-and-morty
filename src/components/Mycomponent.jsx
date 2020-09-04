@@ -18,81 +18,76 @@ export default class Mycomponent extends React.Component {
         super (props)
         this.state = {
             items : [],
+            api_URL : 'https://rickandmortyapi.com/api/character/?name=',
             nextPage : '',
             prevPage : '',
-            isLoaded : false
+            isLoaded : false,
+            query : ''
         }
+    }
+
+    fetchDataFromApi (url,query) {
+          
+        axios.get(url+query)
+        .then(res => {
+          
+            this.setState({
+                items : res.data.results,
+                nextPageLink : res.data.info.next,
+                prevPageLink : res.data.info.prev,
+                isLoaded : true
+            })
+        }).catch (err => {
+            console.log(err)
+        })
+     
     }
 
     componentDidMount()
     {
-        axios.get('https://rickandmortyapi.com/api/character/')
-        .then(res => {
-          
-            this.setState({
-                items : res.data.results,
-                nextPageLink : res.data.info.next,
-                prevPageLink : res.data.info.prev,
-                isLoaded : true
-            })
-        }).catch (err => {
-            console.log(err)
-        })
+        this.fetchDataFromApi(this.state.api_URL,this.state.query);
     }
+
+
+    handleOnInputChange = (event) => {
+        this.setState({
+            query : event.target.value,
+            isLoaded : false
+        }, () => {
+            this.fetchDataFromApi(this.state.api_URL,this.state.query)
+        })
+        
+      }
 
     nextPage = () => {
     
-      const {nextPageLink} = this.state
-      axios.get(nextPageLink)
-        .then(res => {
-          
-            this.setState({
-                items : res.data.results,
-                nextPageLink : res.data.info.next,
-                prevPageLink : res.data.info.prev,
-                isLoaded : true
-            })
-        }).catch (err => {
-            console.log(err)
-        })
+        this.fetchDataFromApi(this.state.nextPageLink,'')
     }
 
     prevPage = () => {
      
-      const {prevPageLink} = this.state
-      axios.get(prevPageLink)
-      .then(res => {
-        
-          this.setState({
-              items : res.data.results,
-              nextPageLink : res.data.info.next,
-              prevPageLink : res.data.info.prev,
-              isLoaded : true
-          })
-      }).catch (err => {
-          console.log(err)
-      })
-
+        this.fetchDataFromApi(this.state.prevPageLink,'')
     }
 
     render() {
 
-         var {items, isLoaded ,nextPageLink, prevPageLink} = this.state
-         if (!isLoaded)
-         return <CircularProgress></CircularProgress>
-         else
-         {return (
+         var {items,nextPageLink, prevPageLink} = this.state
+          return (
             <div>
-            <Container maxWidth="lg" spacing={2}> 
-            <Appbar></Appbar>
+            <Container spacing={1}>
+            <Grid item md={12} xs={12}> 
+            <Appbar search={this.handleOnInputChange}></Appbar>
+            </Grid>
+            <Grid item md={12}>   
             <Stepper
             isNext={nextPageLink} 
             isPrev={prevPageLink} 
             next={this.nextPage} 
             prev={this.prevPage}
-            style={{flexDirection :'row',justifyContent :'flex'}}
+            style={{justifyContent: 'flex-end'}}
             />
-            <Grid container spacing={2}>
+            </Grid>
+            <Grid item container spacing={1}>
              { items.map (item => 
              <Childcomponent 
              key={item.id} 
@@ -106,7 +101,7 @@ export default class Mycomponent extends React.Component {
             </Grid>
             </Container> 
             </div>
-         );}
+         );
     }
 }
 
