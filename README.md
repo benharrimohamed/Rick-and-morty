@@ -30,7 +30,7 @@
   <h3 align="center">Rick & Morty</h3>
 
   <p align="center">
-    Check out all Rick & Morty Characters
+    Check out all Rick & Morty show Characters
     <br />
   <a href="https://benharrimohamed.github.io/Rick-and-morty/"><strong>Rick & Morty</strong></a>
     <br />
@@ -53,7 +53,7 @@ research and i start learning more about this library after a while things begin
 
 Features:
 * Live search 
-* Fetching an API
+* Fetching an API with Axios
 * working with components
 * Using Material-UI
 * Pagination
@@ -66,50 +66,10 @@ These are the technologies i used to build this app :
 * [Rick & Morty API](https://rickandmortyapi.com/) by [Alex](https://github.com/afuh) <strong>Thank you !</strong>
 
 
-
-```
-4. Enter your API in `config.js`
-```JS
-const API_KEY = 'ENTER YOUR API';
-```
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
-
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-
 
 <!-- CONTACT -->
 ## Contact
