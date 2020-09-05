@@ -19,6 +19,8 @@
 -->
 
 
+ [![MIT License][license-shield]][license-url]
+ [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 <!-- PROJECT LOGO -->
@@ -33,9 +35,7 @@
   <p align="center">
     Check out all Rick & Morty Characters
     <br />
-    <a href="https://benharrimohamed.github.io/Rick-and-morty/"><strong>Rick & Morty</strong></a>
-    [![MIT License][license-shield]][license-url]
-    [![LinkedIn][linkedin-shield]][linkedin-url]
+  <a href="https://benharrimohamed.github.io/Rick-and-morty/"><strong>Rick & Morty</strong></a>
     <br />
   </p>
 </p>
@@ -45,6 +45,9 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
@@ -116,6 +119,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Project Link: [https://github.com/benharrimohamed/Rick-and-morty](https://github.com/benharrimohamed/Rick-and-morty)
 
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/mohammed-ben-harri-059734143
