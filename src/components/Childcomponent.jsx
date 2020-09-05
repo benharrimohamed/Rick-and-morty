@@ -14,7 +14,7 @@ export default function Childcomponent (props)  {
 
   const StyledBadge = withStyles((theme) => ({
     badge: {
-      backgroundColor: props.status == "Alive" ? "#5cb85c" : "#d9534f",
+      backgroundColor: props.status === "Alive" ? "#5cb85c" : "#d9534f",
       boxShadow: "0 0 0 3px #fff"
     },
   }))(Badge);

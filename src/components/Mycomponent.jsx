@@ -4,8 +4,6 @@ import Childcomponent from './Childcomponent'
 import Appbar from './Appbar'
 import axios from 'axios'
 import Container from '@material-ui/core/Container'
-import CircularProgress from '@material-ui/core/CircularProgress';
-import Button from '@material-ui/core/Button'
 import Stepper from './Stepper'
 
 
@@ -74,7 +72,7 @@ export default class Mycomponent extends React.Component {
          var {items,nextPageLink, prevPageLink} = this.state
           return (
             <div>
-            <Container spacing={1}>
+            <Container spacing={3}>
             <Grid item md={12} xs={12}> 
             <Appbar search={this.handleOnInputChange}></Appbar>
             </Grid>
@@ -87,7 +85,7 @@ export default class Mycomponent extends React.Component {
             style={{justifyContent: 'flex-end'}}
             />
             </Grid>
-            <Grid item container spacing={1}>
+            <Grid item container spacing={2}>
              { items.map (item => 
              <Childcomponent 
              key={item.id} 
@@ -98,6 +96,17 @@ export default class Mycomponent extends React.Component {
              gender={item.gender}
              origin={item.origin.name}
              ></Childcomponent>)}
+            </Grid>
+            <Grid item container spacing={2}>
+            <Grid item md={12}>   
+            <Stepper
+            isNext={nextPageLink} 
+            isPrev={prevPageLink} 
+            next={this.nextPage} 
+            prev={this.prevPage}
+            style={{justifyContent: 'flex-end'}}
+            />
+            </Grid>
             </Grid>
             </Container> 
             </div>

@@ -20,6 +20,7 @@ export default function Stepper(props) {
     <MobileStepper
       position="static"
       className={classes.root}
+      steps={1}
       nextButton={
         <Button size="small" onClick={props.next} disabled={props.isNext === null}>
           Next

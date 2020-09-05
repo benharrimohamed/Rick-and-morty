@@ -1,17 +1,17 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu'
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    paddingBottom : 20
+    paddingBottom : 20,
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -51,7 +51,6 @@ const useStyles = makeStyles((theme) => ({
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create('width'),
     width: '100%',
@@ -72,10 +71,13 @@ export default function SearchAppBar(props) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="sticky" style={{ background: '#61DBA0' }}>
         <Toolbar>
+          <IconButton className={classes.menuButton}>
+            <MenuIcon/>
+          </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            Rick And Morty
+            Geez Rick ,React is awesome !
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
