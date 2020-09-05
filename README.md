@@ -29,14 +29,14 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/benharrimohamed/Rick-and-morty/">
+    <img src="images/logo.png" alt="Logo" width="100" height="100">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Rick & Morty</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    My very first application with ReactJs
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
