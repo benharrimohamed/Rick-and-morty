@@ -47,48 +47,25 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-As a huge fan of Rick & Morty show i made this simple web application using ReactJs & Material-Ui , 4 days ago i had no idea about Reactjs and how it works , but i did some
-research and i start learning more about this library so after some coding and bugs fixing i finished this app and hosted it on github.io !
+As a huge fan of Rick & Morty show i made this simple web application using React & Material-Ui , 4 days ago i had no idea about React and how it works , i did some
+research and i start learning more about this library after a while things begin to be more clear and i ended up finishing this project .
 
 Features:
-* Live search with API 
+* Live search 
 * Fetching an API
 * working with components
 * Using Material-UI
+* Pagination
 
 
 ### Built With
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+These are the technologies i used to build this app :
 * [ReactJs](https://reactjs.org)
 * [Material-UI](https://material-ui.com)
-* [Rick & Morty API](https://rickandmortyapi.com/)
+* [Rick & Morty API](https://rickandmortyapi.com/) by [Alex](https://github.com/afuh) <strong>Thank you !</strong>
 
 
 
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-```sh
-npm install npm@latest -g
-```
-
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-```sh
-git clone https://github.com/your_username_/Project-Name.git
-```
-3. Install NPM packages
-```sh
-npm install
 ```
 4. Enter your API in `config.js`
 ```JS
