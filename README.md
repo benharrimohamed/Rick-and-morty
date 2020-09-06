@@ -27,7 +27,7 @@
     <img src="images/logo.png" alt="Logo" width="100" height="100">
   </a>
 
-  <h3 align="center">Rick & Morty</h3>
+  <h3 align="center">Rick & Morty !</h3>
 
   <p align="center">
     Check out all Rick & Morty show Characters
